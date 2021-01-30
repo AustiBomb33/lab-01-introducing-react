@@ -1,15 +1,14 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-function Greeting(name) {
+import '../Styles.css'
+function Greeting({name}) {
     console.log("Generating Greeting with the following name");
-    name = name.name.trim();
+    name = name.trim();
     console.log(name);
     if(name === ""){
-        return <p >Hey! It's been a while!</p>
+        return <h1>Hey! It's been a while!</h1>
     } else {
         return (
-            <p>Hey, {name}! It's been a while!</p>
+            <h1>Hey, {name}! It's been a while!</h1>
     );
     }
 }

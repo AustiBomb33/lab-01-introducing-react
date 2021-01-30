@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Greeting from './component/Greeting'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Jumbotron } from 'react-bootstrap';
+import './Styles.css'
 
 const App = () => {
 
@@ -9,13 +8,14 @@ const App = () => {
 
     console.log("App Loaded");
     return (
-        <Jumbotron>
+        
+        <div id="styleInput">
             <input
                 onChange={({ target: { value } }) => setName(value)}
                 placeholder="Enter your name"
             />
             <Greeting name={name} />
-        </Jumbotron>
+        </div>
     );
 }
 
